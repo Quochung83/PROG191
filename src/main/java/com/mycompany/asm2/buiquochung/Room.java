@@ -37,20 +37,17 @@ public class Room {
         long diffInMillies = checkOutDate.getTime() - checkInDate.getTime();
         long diffInDays = diffInMillies / (24 * 60 * 60 * 1000);
 
-        // Sử dụng giá trị mặc định tương ứng với loại phòng
+
         double basePrice = (roomType == TypeRoom.Luxury) ? defaultLuxuryPrice : defaultNormalPrice;
         return diffInDays * basePrice;
     }
 
-    // Các phương thức getter và setter
+
 
     public double getTotalPrice() {
         return totalPrice;
     }
 
-    public void setTotalPrice(double totalPrice) {
-        this.totalPrice = totalPrice;
-    }
     public double calculateTotalPrice() {
         // Replace this with your actual calculation logic
         double basePrice = (roomType == TypeRoom.Luxury) ? 200.0 : 100.0;
